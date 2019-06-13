@@ -1,15 +1,16 @@
 {
-  "name": "@hbtgmbh/dmn-eval-js",
-  "version": "1.4.4",
+  "name": "dmn-eval-js-pablo",
+  "version": "1.5.0",
   "description": "Evaluation of DMN 1.1 decision tables, limited to S-FEEL (Simple Friendly Enough Expression Language)",
   "license": "MIT",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "lint": "eslint .",
     "lintfix": "eslint . --fix",
     "test": "./node_modules/.bin/mocha ./test/**/*.spec.js",
-    "build": "./node_modules/.bin/gulp",
-    "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
+    "build:gulp": "./node_modules/.bin/gulp",
+    "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
+    "build": "npm run build:gulp && webpack"
   },
   "pre-commit": [
     "precommit-msg",
@@ -34,18 +35,23 @@
   "author": "Andre Hegerath <andre.hegerath@hbt.de>",
   "dependencies": {
     "big.js": "^3.1.3",
+    "date-fns": "^2.0.0-alpha.33",
     "dmn-moddle": "^4.0.0",
-    "lodash": "^4.17.4",
-    "loglevel": "^1.6.1",
+    "lodash": "^4.17.11",
+    "loglevel": "^1.6.3",
     "moment": "^2.21.0",
     "moment-timezone": "^0.5.13"
   },
   "devDependencies": {
-    "chai": "^4.1.2",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel-loader": "^8.0.6",
+    "chai": "^4.2.0",
     "chalk": "^1.1.3",
+    "check-es5-webpack-plugin": "^1.0.13",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^14.1.0",
-    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-import": "^2.17.3",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.9.0",
     "gulp": "^3.9.1",
@@ -54,16 +60,16 @@
     "gulp-eslint": "^3.0.1",
     "gulp-if": "^2.0.2",
     "gulp-insert": "^0.5.0",
-    "gulp-istanbul": "^1.1.1",
     "gulp-mocha": "^3.0.1",
     "gulp-util": "^3.0.8",
     "gulp-watch": "^4.3.11",
     "istanbul": "^0.4.5",
-    "minimist": "^1.2.0",
     "mocha": "^3.2.0",
     "pegjs": "^0.10.0",
     "pegjs-backtrace": "^0.1.1",
     "pre-commit": "^1.2.2",
-    "through2": "^2.0.3"
+    "through2": "^2.0.5",
+    "webpack": "^4.34.0",
+    "webpack-cli": "^3.3.4"
   }
 }

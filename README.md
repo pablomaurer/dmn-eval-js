@@ -1,4 +1,16 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+Forked to get ES5 compatibily
+
+Changes:
+
+## 1.5.2 TODO
+- remove gulp / more simplification possible?
+
+## 1.5.1 TODO
+- replace Moment with date-fns or dayjs
+
+## 1.5.0
+- Added Webpack / Babel for ES5 compatibily
+- Simplified gulp tasks
 
 # About
 

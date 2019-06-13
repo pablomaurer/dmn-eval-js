@@ -9,7 +9,7 @@ const moment = require('moment');
 const expect = chai.expect;
 const assert = chai.assert;
 
-const { decisionTable, dateTime } = require('../index');
+const { decisionTable, dateTime } = require('../src');
 
 function readFile(filename) {
   return fs.readFileSync(filename, { encoding: 'UTF-8' });

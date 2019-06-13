@@ -5,3 +5,5 @@ gulpfile.js
 /_archive/*
 /utils/dev/*
 dummy.js
+index.js
+webpack.config.js

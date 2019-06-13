@@ -4,13 +4,11 @@ npm-debug.log
 *.iml
 /.idea
 
-# webpack and babel
-/dist/dmn-eval-js.js
-webpack.config.js
-.babelrc
-
 # Coveralls
 coverage
 
 # GitLab
 .gitlab-ci.yml
+
+.cache
+dist

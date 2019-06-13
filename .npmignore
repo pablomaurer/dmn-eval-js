@@ -3,6 +3,7 @@ test
 coverage
 src
 grammar
+dist
 
 #build tools
 .travis.yml
